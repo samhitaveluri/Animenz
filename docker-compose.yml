@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  website:
+    container_name: chanasia-rengme
+    image: 'chanasia/rengme:1.0'
+    ports:
+      - 3000:3000
+    restart: 'unless-stopped'
+  api:
+    container_name: chanasia-rengme-api
+    image: chanasia/rengme_api:1.0
+    ports:
+      - 5000:5000
+    restart: 'unless-stopped'
+  
